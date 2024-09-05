@@ -1,0 +1,131 @@
+{
+    "account_name": "transaction_processing",
+    "type": "SALE",
+    "channel": "CNP",
+    "capture_mode": "LATER",
+    "amount": "780",
+    "currency": "CHF",
+    "reference": "5c5accc3-0588-4ac5-8b05-57c0bb4bae3d",
+    "country": "BG",
+    "payment_method": {
+        "entry_mode": "MOTO",
+        "card": {
+            "number": "4263970000005262",
+            "expiry_month": "08",
+            "expiry_year": "25",
+            "cvv": "123",
+            "chip_condition": "PREV_SUCCESS",
+            "cvv_indicator": "PRESENT",
+            "funding": "CREDIT"
+        }
+    }
+}
+
+Response: {
+    "id": "TRN_fW9wwBRyoBv65sngd1FiVFdSYbi5Uw_57c0bb4bae3d",
+    "time_created": "2024-08-28T16:43:46.342Z",
+    "type": "SALE",
+    "status": "PREAUTHORIZED",
+    "channel": "CNP",
+    "capture_mode": "LATER",
+    "amount": "780",
+    "currency": "CHF",
+    "country": "BG",
+    "merchant_id": "MER_7e3e2c7df34f42819b3edee31022ee3f",
+    "merchant_name": "Sandbox_merchant_3",
+    "account_id": "TRA_c9967ad7d8ec4b46b6dd44a61cde9a91",
+    "account_name": "transaction_processing",
+    "reference": "5c5accc3-0588-4ac5-8b05-57c0bb4bae3d",
+    "payment_method": {
+        "result": "00",
+        "message": "(00)[ test system ] AUTHORISED",
+        "entry_mode": "MOTO",
+        "card": {
+            "funding": "CREDIT",
+            "brand": "VISA",
+            "masked_number_last4": "XXXXXXXXXXXX5262",
+            "authcode": "123456",
+            "brand_reference": "DMMvnl8BImeu7pZL",
+            "brand_time_created": "",
+            "cvv_result": "MATCHED",
+            "provider": {
+                "result": "00",
+                "cvv_result": "M",
+                "avs_address_result": "M",
+                "avs_postal_code_result": "M"
+            }
+        }
+    },
+    "risk_assessment": [
+        {
+            "mode": "ACTIVE",
+            "result": "ACCEPTED",
+            "rules": [
+                {
+                    "reference": "0c93a6c9-7649-4822-b5ea-1efa356337fd",
+                    "description": "Cardholder Name Rule",
+                    "mode": "ACTIVE",
+                    "result": "ACCEPTED"
+                },
+                {
+                    "reference": "a539d51a-abc1-4fff-a38e-b34e00ad0cc3",
+                    "description": "CardNumber block",
+                    "mode": "ACTIVE",
+                    "result": "ACCEPTED"
+                },
+                {
+                    "reference": "d023a19e-6985-4fda-bb9b-5d4e0dedbb1e",
+                    "description": "Amount test",
+                    "mode": "ACTIVE",
+                    "result": "ACCEPTED"
+                }
+            ]
+        }
+    ],
+    "batch_id": "",
+    "action": {
+        "id": "ACT_fW9wwBRyoBv65sngd1FiVFdSYbi5Uw",
+        "type": "PREAUTHORIZE",
+        "time_created": "2024-08-28T16:43:46.342Z",
+        "result_code": "SUCCESS",
+        "app_id": "4gPqnGBkppGYvoE5UX9EWQlotTxGUDbs",
+        "app_name": "SDK_TESTING_APP"
+    }
+}
+
+
+{
+    {
+        "amount": "880",
+        "gratuity_amount": "100",
+        "currency_conversion": "string"
+    }
+}
+
+Response: {
+    "id": "TRN_r4qdItNRLydA8PVh0wx21WLoArNsAe_198be20b5355",
+    "time_created": "2024-08-28T16:56:03.242Z",
+    "type": "SALE",
+    "status": "CAPTURED",
+    "amount": "880",
+    "currency": "CHF",
+    "country": "BG",
+    "reference": "aa84faa2-b561-4d89-a2ce-198be20b5355",
+    "payment_method": {
+        "result": "00",
+        "message": "Settled Successfully",
+        "card": {
+            "authcode": "000000",
+            "brand_reference": "F0zlXhmLaFP1DYMe"
+        }
+    },
+    "batch_id": "BAT_1430494",
+    "action": {
+        "id": "ACT_ssTDxTh2vuK0xZBfg7j1tBGEi5kL2O",
+        "type": "CAPTURE",
+        "time_created": "2024-08-28T17:03:56.033Z",
+        "result_code": "SUCCESS",
+        "app_id": "4gPqnGBkppGYvoE5UX9EWQlotTxGUDbs",
+        "app_name": "SDK_TESTING_APP"
+    }
+}
