@@ -7,10 +7,8 @@ import { LoginPage } from "../auth";
 export const AppRouter = () => {
   return (
     <>
-
      
-      <Routes>
-        
+      <Routes>        
 
         <Route path="login" element={<LoginPage/>} />
 
